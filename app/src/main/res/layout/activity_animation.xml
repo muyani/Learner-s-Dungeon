@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AnimationActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+
+    <ImageView
+        android:id="@+id/profilePic"
+        android:layout_width="0dp"
+        android:layout_height="166dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="126dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="124dp"
+        android:src="@drawable/dow"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonMove"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnPrevious"
+        tools:srcCompat="@tools:sample/avatars[10]" />
+
+    <Button
+        android:id="@+id/buttonZoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="32dp"
+        android:onClick="zoom"
+        android:text="Zoom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/btnNext" />
+
+    <Button
+        android:id="@+id/buttonBlink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/buttonZoom"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginBottom="32dp"
+        android:onClick="blink"
+        android:text="Blink"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonClockwise" />
+
+    <Button
+        android:id="@+id/buttonClockwise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/buttonZoom"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="13dp"
+        android:onClick="clockwise"
+        android:text="Clockwise"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonBlink"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonSlide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/buttonZoom"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="14dp"
+        android:onClick="slide"
+        android:text="Slide"
+        app:layout_constraintBottom_toTopOf="@+id/buttonZoom"
+        app:layout_constraintStart_toStartOf="@+id/buttonZoom" />
+
+    <Button
+        android:id="@+id/buttonFade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/buttonBlink"
+        android:layout_alignTop="@+id/buttonSlide"
+        android:layout_marginBottom="14dp"
+        android:onClick="fade"
+        android:text="Fade"
+        app:layout_constraintBottom_toTopOf="@+id/buttonBlink"
+        app:layout_constraintStart_toStartOf="@+id/buttonBlink" />
+
+    <Button
+        android:id="@+id/buttonMove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/buttonClockwise"
+        android:layout_alignBottom="@+id/buttonSlide"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="11dp"
+        android:onClick="move"
+        android:text="Move"
+        app:layout_constraintBottom_toTopOf="@+id/buttonClockwise"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnPrevious"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="5dp"
+        android:layout_toStartOf="@+id/btnNext"
+        android:background="@android:color/darker_gray"
+        android:onClick="goBack"
+        android:text="Previous"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@+id/btnNext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignEnd="@+id/buttonClockwise"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="7dp"
+        android:background="@android:color/darker_gray"
+        android:text="Next"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnPrevious"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="29dp"
+        android:layout_toStartOf="@+id/lastName"
+        android:text="Animation Page"
+        android:textColor="@color/pageLabel"
+        android:textSize="30sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>
